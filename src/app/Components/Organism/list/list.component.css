@@ -1,0 +1,12 @@
+.fixed{
+    position: fixed;
+    left: 30%;
+    right: 30%;
+    top: 30%;
+    bottom: 15%;    
+    border: 30pt;    
+    padding: 20PX;
+    border-radius: 10px;
+    border:solid 3px rgba(0,0,0,.3); 
+    background-color: bisque;     
+}

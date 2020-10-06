@@ -1,0 +1,18 @@
+<ul class="list-group" *ngFor= 'let pais of listado; index as i  '>
+    <li class="list-group-item d-flex justify-content-between align-items-center text-align-center">  Pais: {{pais.name}} </li>
+      <div class="btn-group" role="group" aria-label="Basic sample">
+          <button class="btn btn-primary btn-sm" (click)='datos.detalle(pais.name)' >Detalle</button>
+          <button class="btn btn-secondary btn-sm" (click)='modificacion(i)'>Modificar</button>          
+          
+      </div>      
+  </ul>
+
+<div class="fixed container-fluid" [hidden]='h_menu'>
+    
+        <label for="pais">Pais:</label> <input type="text" name="pais" [value]="modificar.name"> <br>
+        <label for="capital"> Capital: </label> <input type="text" name="capital" [value]="modificar.capital">  <br>
+        <label for="region">Region:</label> <input type="text" name="region" value={{modificar.region}} > <br>
+        <label for="subregion">Subregion:</label> <input type="text" name="subregion" value={{modificar.subregion}}><br>
+        <label for="idioma">Idioma/as: </label> <span *ngFor='let idioma of modificar.languages'>  {{idioma.name}} </span>  <br>
+     <button >Guardar</button><button (click)='h_menu=true'>Cancelar</button>
+</div>

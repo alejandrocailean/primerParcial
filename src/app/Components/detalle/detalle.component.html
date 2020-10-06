@@ -1,0 +1,11 @@
+<div class="container-fluid">
+ <span  *ngFor='let pais of paisElegido'>
+    <label for="pais">Pais:</label> <input type="text" name="pais" [value]="pais.name"> <br>
+    <label for="capital"> Capital: </label> <input type="text" name="capital" [value]="pais.capital">  <br>
+    <label for="bandera"> Bandera: </label> <img src={{pais.flag}} width="15px" height="15px" name="bandera"><br> 
+    <label for="nativo">Nombre Nativo:</label> <input type="text" name="nativo" [value]="pais.nativeName" > <br>
+    <label for="region">Region:</label> <input type="text" name="region" value={{pais.region}} > <br>
+    <label for="subregion">Subregion:</label> <input type="text" name="subregion" value={{pais.subregion}}><br>
+    <label for="idioma">Idioma/as: </label> <span *ngFor='let idioma of pais.languages'>  {{idioma.name}}   </span>    
+ </span>
+</div>
